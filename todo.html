@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-List</title>
+ 
+</head>
+<body>
+  <style>  
+        body{
+            background-color: rgb(232, 206, 232);
+            height: 100%;
+        }
+        .TodoGrid{
+            flex-wrap: wrap;
+            align-items: center;
+                height: 70vh;
+                width: 90vw;
+                margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            gap: 20px;
+            justify-content:space-evenly ;
+        }
+
+        #item{
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            height: 100% ;
+            max-height: 40vh;
+            font-size: larger;
+            font-weight: 500;
+          background-color: cadetblue;
+          border-radius: 20px;
+           text-decoration: underline;
+           justify-content: space-between;
+        }
+        #item input{
+            width: 85%;
+            height: 23px;
+            margin-left: 7%;
+            border: none;
+            border: 1px solid maroon;
+            background-color:rgb(127, 182, 184) ;
+        }
+        #item button{
+            height: 23px;
+            width: 10vw;
+            border-radius: 8px;
+            margin-top: -5%;
+            margin-left: 30%;
+            margin-bottom: 4%;
+            align-content: center;
+            color: aliceblue;
+background-color: rgb(12, 51, 24);
+        }
+        #item h3{
+            text-align: center;
+            font-size: 25px;
+        }
+        #item:hover{
+            backdrop-filter: blur(100px);
+            background: opacity;
+        }
+    </style>
+    <center>
+
+        <div class="TodoGrid">
+
+            <div id="item"> <h3>Monday</h3>
+                <ul id="monday-todos"></ul>
+                <input type="text" id="monday-input" placeholder="Add todo">
+                <button onclick="addTodo('monday')">Add</button></div>
+
+
+            <div id="item"><h3>Tuesday</h3>
+                <ul id="tuesday-todos"></ul>
+                <input type="text" id="tuesday-input" placeholder="Add todo">
+                <button onclick="addTodo('tuesday')">Add</button></div>
+
+
+            <div id="item"><h3>Wednesday</h3>
+                <ul id="wednesday-todos"></ul>
+                <input type="text" id="wednesday-input" placeholder="Add todo">
+                <button onclick="addTodo('wednesday')">Add</button></div>
+
+
+            <div id="item"><h3>Thursday</h3>
+                <ul id="thursday-todos"></ul>
+                <input type="text" id="thursday-input" placeholder="Add todo">
+                <button onclick="addTodo('thursday')">Add</button></div>
+
+
+            <div id="item"><h3>Friday</h3>
+                <ul id="friday-todos"></ul>
+                <input type="text" id="friday-input" placeholder="Add todo">
+                <button onclick="addTodo('friday')">Add</button></div>
+
+
+            <div id="item"><h3>Saturday</h3>
+                <ul id="saturday-todos"></ul>
+                <input type="text" id="saturday-input" placeholder="Add todo">
+                <button onclick="addTodo('saturday')">Add</button></div>
+        </div>
+    </center>
+    <script>
+        function addTodo(day) {
+            const inputId = `${day}-input`;
+            const ulId = `${day}-todos`;
+            const input = document.getElementById(inputId);
+            const ul = document.getElementById(ulId);
+
+            if (input.value.trim() !== '') {
+                const li = document.createElement('li');
+                li.textContent = input.value;
+                ul.appendChild(li);
+                input.value = '';
+            }
+        }
+    </script>
+    </body>
+</html>

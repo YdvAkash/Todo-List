@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://img.icons8.com/external-flat-icons-vectorslab/68/external-Checklist-shopping-and-commerce-flat-icons-vectorslab.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-App</title>
+</head>
+<body><center>
+
+    <nav>
+        <div class="logo">
+            
+            <img   src="https://img.icons8.com/external-flat-icons-vectorslab/68/external-Checklist-shopping-and-commerce-flat-icons-vectorslab.png" alt="external-Checklist-shopping-and-commerce-flat-icons-vectorslab"/>
+            <h1>TODO APP</h1>
+        </div>
+        <div class="SocialMedia">
+            
+            <div> <img  src="https://img.icons8.com/plasticine/50/github.png" alt="github"/></div>
+            <div> <img  src="https://img.icons8.com/doodle/48/linkedin--v2.png" alt="linkedin--v2"/></div>
+            <div> <img src="https://img.icons8.com/plasticine/50/twitter.png" alt="twitter"/></div>
+        </div>
+    </nav>
+
+    <div class="CompleteBody">
+    
+        <div class="SelectionBox">
+             <div class="SelectionBox1"> <a href="todo.html"><button onclick="box1()"><img height="30px" src="https://img.icons8.com/plasticine/50/todo-list.png" alt="todo-list"/>Todo List</button></a>
+            
+               
+                <center>
+            
+                    <div class="TodoGrid">
+            
+                        <div id="item"> <h3>Monday</h3>
+                            <ul id="monday-todos"></ul>
+                            <input type="text" id="monday-input" placeholder="Add todo">
+                            <button onclick="addTodo('monday')">Add</button></div>
+            
+            
+                        <div id="item"><h3>Tuesday</h3>
+                            <ul id="tuesday-todos"></ul>
+                            <input type="text" id="tuesday-input" placeholder="Add todo">
+                            <button onclick="addTodo('tuesday')">Add</button></div>
+            
+            
+                        <div id="item"><h3>Wednesday</h3>
+                            <ul id="wednesday-todos"></ul>
+                            <input type="text" id="wednesday-input" placeholder="Add todo">
+                            <button onclick="addTodo('wednesday')">Add</button></div>
+            
+            
+                        <div id="item"><h3>Thursday</h3>
+                            <ul id="thursday-todos"></ul>
+                            <input type="text" id="thursday-input" placeholder="Add todo">
+                            <button onclick="addTodo('thursday')">Add</button></div>
+            
+            
+                        <div id="item"><h3>Friday</h3>
+                            <ul id="friday-todos"></ul>
+                            <input type="text" id="friday-input" placeholder="Add todo">
+                            <button onclick="addTodo('friday')">Add</button></div>
+            
+            
+                        <div id="item"><h3>Saturday</h3>
+                            <ul id="saturday-todos"></ul>
+                            <input type="text" id="saturday-input" placeholder="Add todo">
+                            <button onclick="addTodo('saturday')">Add</button></div>
+                    </div>
+                </center>
+                <script>
+                    function addTodo(day) {
+                        const inputId = `${day}-input`;
+                        const ulId = `${day}-todos`;
+                        const input = document.getElementById(inputId);
+                        const ul = document.getElementById(ulId);
+            
+                        if (input.value.trim() !== '') {
+                            const li = document.createElement('li');
+                            li.textContent = input.value;
+                            ul.appendChild(li);
+                            input.value = '';
+                        }
+                    }
+                </script>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+             
+             <div class="">
+
+                 <div class="SelectionBox2"><button><img height="30px"  src="https://img.icons8.com/plasticine/50/todo-list.png" alt="todo-list"/>Important Work</button>    </div>
+       </div>
+
+
+
+    </div>
+</center>
+</body>
+
+</html>

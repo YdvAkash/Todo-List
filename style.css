@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html,body{
+    flex-wrap: wrap;
+    height: 250vh;
+    background-color: rgb(232, 206, 232);
+}
+nav{
+    background-color: rgb(198, 168, 198);
+    height: 8vh;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    color: rgb(194, 70, 25);
+    justify-content: space-between;
+    border-bottom: 0.1rem solid black;
+}
+.logo{
+    display: flex;
+}
+.SocialMedia{
+    display: flex;
+     gap: 30px;
+     align-items: center;
+     justify-items: end;
+}
+#SelectionBox{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top:20px;
+    /* align-items: center; */
+}
+.SelectionBox1{
+    border-right: 1px solid maroon;
+}
+button{
+    margin-top: 50px;
+    background-color: transparent;
+    font-size: 35px;
+    color: rgb(116, 37, 37);
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TodoGrid{
+    flex-wrap: wrap;
+    align-items: center;
+        height: 80vh;
+        width: 90vw;
+        margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 20px;
+    justify-content:space-evenly ;
+}
+
+#item{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100% ;
+    max-height: 40vh;
+    font-size: larger;
+    font-weight: 500;
+  background-color: cadetblue;
+  border-radius: 20px;
+  /* text-align: center; */
+   /* text-decoration: underline; */
+   justify-content: space-between;
+}
+#item input{
+    width: 85%;
+    height: 23px;
+    margin-left: 7%;
+    border: none;
+    border: 1px solid maroon;
+    background-color:rgb(127, 182, 184) ;
+}
+#item li{
+margin-left: 30px;
+}
+#item button{
+    height: 33px;
+    width: 7vw;
+    border-radius: 8px;
+    margin-top: -5%;
+    margin-left: 40%;
+    margin-bottom: 4%;
+    align-content: center;
+    font-size: 20px;
+    color: aliceblue;
+background-color: rgb(12, 51, 24);
+}
+#item h3{
+    margin-top: 2%;
+
+    text-align: center;
+    font-size: 25px;
+}
+#item:hover{
+    backdrop-filter: blur(100px);
+    background: opacity;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
