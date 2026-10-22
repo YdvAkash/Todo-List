@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link rel="icon" href="https://img.icons8.com/external-flat-icons-vectorslab/68/external-Checklist-shopping-and-commerce-flat-icons-vectorslab.png">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A simple weekly to-do list for organizing tasks by day.">
+    <script src="todo.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo-App</title>
 </head>
@@ -34,56 +36,42 @@
                     <div class="TodoGrid">
             
                         <div id="item"> <h3>Monday</h3>
-                            <ul id="monday-todos"></ul>
-                            <input type="text" id="monday-input" placeholder="Add todo">
-                            <button onclick="addTodo('monday')">Add</button></div>
+                            <ul id="monday-todos" aria-live="polite" aria-label="Monday tasks"></ul>
+                            <input type="text" id="monday-input" placeholder="Add todo" aria-label="New Monday task" maxlength="200">
+                            <button type="button" onclick="addTodo('monday')">Add</button></div>
             
             
                         <div id="item"><h3>Tuesday</h3>
-                            <ul id="tuesday-todos"></ul>
-                            <input type="text" id="tuesday-input" placeholder="Add todo">
-                            <button onclick="addTodo('tuesday')">Add</button></div>
+                            <ul id="tuesday-todos" aria-live="polite" aria-label="Tuesday tasks"></ul>
+                            <input type="text" id="tuesday-input" placeholder="Add todo" aria-label="New Tuesday task" maxlength="200">
+                            <button type="button" onclick="addTodo('tuesday')">Add</button></div>
             
             
                         <div id="item"><h3>Wednesday</h3>
-                            <ul id="wednesday-todos"></ul>
-                            <input type="text" id="wednesday-input" placeholder="Add todo">
-                            <button onclick="addTodo('wednesday')">Add</button></div>
+                            <ul id="wednesday-todos" aria-live="polite" aria-label="Wednesday tasks"></ul>
+                            <input type="text" id="wednesday-input" placeholder="Add todo" aria-label="New Wednesday task" maxlength="200">
+                            <button type="button" onclick="addTodo('wednesday')">Add</button></div>
             
             
                         <div id="item"><h3>Thursday</h3>
-                            <ul id="thursday-todos"></ul>
-                            <input type="text" id="thursday-input" placeholder="Add todo">
-                            <button onclick="addTodo('thursday')">Add</button></div>
+                            <ul id="thursday-todos" aria-live="polite" aria-label="Thursday tasks"></ul>
+                            <input type="text" id="thursday-input" placeholder="Add todo" aria-label="New Thursday task" maxlength="200">
+                            <button type="button" onclick="addTodo('thursday')">Add</button></div>
             
             
                         <div id="item"><h3>Friday</h3>
-                            <ul id="friday-todos"></ul>
-                            <input type="text" id="friday-input" placeholder="Add todo">
-                            <button onclick="addTodo('friday')">Add</button></div>
+                            <ul id="friday-todos" aria-live="polite" aria-label="Friday tasks"></ul>
+                            <input type="text" id="friday-input" placeholder="Add todo" aria-label="New Friday task" maxlength="200">
+                            <button type="button" onclick="addTodo('friday')">Add</button></div>
             
             
                         <div id="item"><h3>Saturday</h3>
-                            <ul id="saturday-todos"></ul>
-                            <input type="text" id="saturday-input" placeholder="Add todo">
-                            <button onclick="addTodo('saturday')">Add</button></div>
+                            <ul id="saturday-todos" aria-live="polite" aria-label="Saturday tasks"></ul>
+                            <input type="text" id="saturday-input" placeholder="Add todo" aria-label="New Saturday task" maxlength="200">
+                            <button type="button" onclick="addTodo('saturday')">Add</button></div>
                     </div>
                 </center>
-                <script>
-                    function addTodo(day) {
-                        const inputId = `${day}-input`;
-                        const ulId = `${day}-todos`;
-                        const input = document.getElementById(inputId);
-                        const ul = document.getElementById(ulId);
-            
-                        if (input.value.trim() !== '') {
-                            const li = document.createElement('li');
-                            li.textContent = input.value;
-                            ul.appendChild(li);
-                            input.value = '';
-                        }
-                    }
-                </script>
+                
             
             
             
